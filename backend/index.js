@@ -17,6 +17,7 @@ const webAppUrl = process.env.NGROK_URL
 // ====================== Module BOTa =====================
 
 bot.on('message', async (msg) => {
+  console.log(10, msg)
   const text = msg.text
   const chatId = String(msg.chat.id)
   const firstName = msg.chat.first_name
