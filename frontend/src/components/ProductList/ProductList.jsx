@@ -4,6 +4,7 @@ import ProductItem from '../ProductItem/ProductItem'
 import { useTelegram } from '../../hooks/useTelegram'
 import { useCallback, useEffect } from 'react'
 
+const ngrokUrl = 'https://4eb2-176-213-208-91.ngrok-free.app/web-data'
 const products = [
   {
     id: '1',
@@ -71,7 +72,7 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedItems),
       queryId
     }
-    fetch('https://4eb2-176-213-208-91.ngrok-free.app/web-data', {
+    fetch(ngrokUrl, {
       // fetch('http://localhost:8000/web-data', {
       method: 'POST',
       headers: {
